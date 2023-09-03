@@ -11,8 +11,8 @@ export interface CustomButtonProps {
 }
 
 export interface SearchManufacturerProps {
-  manufacturer: string;
-  setManufacturer: (manufacturer: string) => void; //void means the function doesn't return anything.
+  selected: string;
+  setSelected: (manufacturer: string) => void; //void means the function doesn't return anything.
 }
 
 export interface CarProps {
@@ -46,6 +46,7 @@ export interface OptionProps {
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+  setFilter: any;
 }
 
 export interface ShowMoreProps {

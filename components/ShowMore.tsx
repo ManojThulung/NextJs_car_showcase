@@ -1,19 +1,14 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/navigation";
 import { ShowMoreProps } from "@/types";
 import CustomButton from "./CustomButton";
-import { createSearchParams } from "@/utility";
 
-const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
-  const router = useRouter();
-
+const ShowMore = ({ pageNumber, isNext, setLimit }: ShowMoreProps) => {
   const handleNavigation = () => {
     const newLimit = (pageNumber + 1) * 10;
-    const newPathName = createSearchParams("limit", `${newLimit}`);
 
-    router.push(newPathName);
+    setLimit(newLimit);
   };
 
   return (
