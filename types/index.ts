@@ -11,8 +11,8 @@ export interface CustomButtonProps {
 }
 
 export interface SearchManufacturerProps {
-  manufacturer: string;
-  setManufacturer: (manufacturer: string) => void; //void means the function doesn't return anything.
+  selected: string;
+  setSelected: (manufacturer: string) => void; //void means the function doesn't return anything.
 }
 
 export interface CarProps {
@@ -28,4 +28,28 @@ export interface CarProps {
   model: string;
   transmission: string;
   year: number;
+}
+
+export interface FilterProps {
+  manufacturer: string;
+  year: number;
+  fuel: string;
+  limit: number;
+  model: string;
+}
+
+export interface OptionProps {
+  value: string;
+  title: string;
+}
+
+export interface CustomFilterProps {
+  title: string;
+  options: OptionProps[];
+  setFilter: any;
+}
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
 }
