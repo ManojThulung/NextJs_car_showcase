@@ -27,8 +27,9 @@ const SearchBar = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (manufacturer.trim() === "" || model.trim() === "") {
+    if (manufacturer.trim() === "" && model.trim() === "") {
       alert("Please fill in the search bar");
+      return;
     }
 
     updateSearchParams(model, manufacturer);
